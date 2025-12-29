@@ -269,3 +269,30 @@ function activeWork() {
 
 linkWork.forEach(l => l.addEventListener('click', activeWork))
 
+/*==================== CERTIFICATION LIGHTBOX ====================*/
+const certLightbox = document.getElementById('cert-lightbox')
+const certLightboxImg = document.getElementById('cert-lightbox-img')
+const certPreviews = document.querySelectorAll('.cert-preview')
+const certClose = document.querySelector('.cert-lightbox__close')
+
+certPreviews.forEach(preview => {
+    preview.addEventListener('click', function () {
+        const img = this.querySelector('img')
+        certLightbox.style.display = 'block'
+        certLightboxImg.src = img.src
+    })
+})
+
+if (certClose) {
+    certClose.addEventListener('click', () => {
+        certLightbox.style.display = 'none'
+    })
+}
+
+// Close when clicking outside the image
+certLightbox.addEventListener('click', (e) => {
+    if (e.target === certLightbox) {
+        certLightbox.style.display = 'none'
+    }
+})
+
