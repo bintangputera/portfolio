@@ -93,6 +93,13 @@ h4 {
     font-family: var(--title-font);
 }
 
+/* Force subtitles to be simple sans-serif */
+.section__subtitle,
+.home__subtitle,
+.home__education {
+    font-family: sans-serif;
+}
+
 ul {
     list-style: none;
 }
