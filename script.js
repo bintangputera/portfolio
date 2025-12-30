@@ -3,6 +3,11 @@ const navMenu = document.getElementById('nav-menu'),
     navToggle = document.getElementById('nav-toggle'),
     navClose = document.getElementById('nav-close')
 
+/*==================== CERTIFICATION LIGHTBOX GLOBALS ====================*/
+const certLightbox = document.getElementById('cert-lightbox')
+const certLightboxImg = document.getElementById('cert-lightbox-img')
+const certClose = document.querySelector('.cert-lightbox__close')
+
 /*===== MENU SHOW =====*/
 /* Validate if constant exists */
 if (navToggle) {
@@ -194,7 +199,6 @@ window.addEventListener('click', (e) => {
 
 /*==================== SWIPER PORTFOLIO ====================*/
 let swiperPortfolio = new Swiper(".mySwiper", {
-    cssMode: true,
     loop: true,
     navigation: {
         nextEl: ".swiper-button-next",
@@ -204,7 +208,6 @@ let swiperPortfolio = new Swiper(".mySwiper", {
         el: ".swiper-pagination",
         clickable: true,
     },
-    mousewheel: true,
     keyboard: true,
     breakpoints: {
         568: {
@@ -220,7 +223,6 @@ let swiperPortfolio = new Swiper(".mySwiper", {
 
 /*==================== SWIPER CERTIFICATION ====================*/
 let swiperCertification = new Swiper(".myCertSwiper", {
-    cssMode: true,
     loop: true,
     navigation: {
         nextEl: ".swiper-button-next",
@@ -230,7 +232,6 @@ let swiperCertification = new Swiper(".myCertSwiper", {
         el: ".swiper-pagination",
         clickable: true,
     },
-    mousewheel: true,
     keyboard: true,
     breakpoints: {
         568: {
@@ -242,6 +243,19 @@ let swiperCertification = new Swiper(".myCertSwiper", {
             spaceBetween: 30,
         },
     },
+    on: {
+        click: function (s, e) {
+            // s is the swiper instance, e is the event
+            const certPreview = e.target.closest('.cert-preview')
+            if (certPreview) {
+                const img = certPreview.querySelector('img')
+                if (img) {
+                    certLightbox.style.display = 'block'
+                    certLightboxImg.src = img.src
+                }
+            }
+        }
+    }
 });
 
 /*==================== MIXITUP FILTER PORTFOLIO (Manual Implementation) ====================*/
@@ -270,19 +284,6 @@ function activeWork() {
 linkWork.forEach(l => l.addEventListener('click', activeWork))
 
 /*==================== CERTIFICATION LIGHTBOX ====================*/
-const certLightbox = document.getElementById('cert-lightbox')
-const certLightboxImg = document.getElementById('cert-lightbox-img')
-const certPreviews = document.querySelectorAll('.cert-preview')
-const certClose = document.querySelector('.cert-lightbox__close')
-
-certPreviews.forEach(preview => {
-    preview.addEventListener('click', function () {
-        const img = this.querySelector('img')
-        certLightbox.style.display = 'block'
-        certLightboxImg.src = img.src
-    })
-})
-
 if (certClose) {
     certClose.addEventListener('click', () => {
         certLightbox.style.display = 'none'
@@ -290,9 +291,11 @@ if (certClose) {
 }
 
 // Close when clicking outside the image
-certLightbox.addEventListener('click', (e) => {
-    if (e.target === certLightbox) {
-        certLightbox.style.display = 'none'
-    }
-})
+if (certLightbox) {
+    certLightbox.addEventListener('click', (e) => {
+        if (e.target === certLightbox) {
+            certLightbox.style.display = 'none'
+        }
+    })
+}
 
