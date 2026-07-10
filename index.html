@@ -1,589 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bintang Putera</title>
-    <meta name="description"
-        content="Portfolio of Bintang Putera, a Creative Developer specializing in building digital experiences.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <!-- Devicon -->
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bintang Putera — Android Developer. Kotlin, Jetpack Compose, MVVM/MVI. 5+ years building production apps.">
+<title>Bintang Putera — Android Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%233ddc84' d='M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24c-1.42-.65-3.02-1-4.47-1s-3.05.35-4.47 1L5.65 5.67c-.19-.29-.55-.38-.84-.22-.3.16-.42.54-.26.85L6.4 9.48C3.3 11.25 1.28 14.44 1 18h22c-.28-3.56-2.3-6.75-5.4-8.52zM7 15.25a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5zm10 0a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5z'/%3E%3C/svg%3E">
 </head>
-
 <body>
-    <!-- Custom cursor removed -->
 
+<div class="bg-grid"></div>
 
-    <header class="header">
-        <nav class="nav container">
-            <a href="#home" class="nav__logo">Bintang Poetra<span class="dot">.</span></a>
+<header id="site-header">
+  <nav class="nav-container">
+    <a href="#top" class="nav-brand">BP<span class="cursor">_</span></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">about</a></li>
+      <li><a href="#experience">experience</a></li>
+      <li><a href="#portfolio">portfolio</a></li>
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#achievements">achievements</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="menu">☰</button>
+  </nav>
+</header>
 
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link active-link">Home</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link">About</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#experience" class="nav__link">Experience</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#portfolio" class="nav__link">Portfolio</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#certification" class="nav__link">Certification</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#skills" class="nav__link">Tools & Skills</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link">Contact</a>
-                    </li>
-                </ul>
-                <div class="nav__close" id="nav-close">
-                    <i class="fa-solid fa-xmark"></i>
-                </div>
-            </div>
+<main>
 
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </nav>
-    </header>
-
-    <main class="main">
-        <!-- HOME SECTION -->
-        <section class="home section" id="home">
-            <div class="home__container container grid">
-                <div class="home__content">
-                    <div class="home__data">
-                        <h3 class="home__subtitle">Hello, I'm</h3>
-                        <h1 class="home__title">Bintang Putera</h1>
-                        <h3 class="home__education">Mobile Developer</h3>
-                        <p class="home__description">
-                            I build accessible, pixel-perfect, and performant web experiences that blend art with code.
-                        </p>
-                        <div class="home__buttons">
-                            <a href="#contact" class="button button--flex">
-                                Let's Talk <i class="fa-regular fa-paper-plane button__icon"></i>
-                            </a>
-                            <a href="#portfolio" class="button button--ghost">
-                                View Work
-                            </a>
-                        </div>
-                    </div>
-                    <div class="home__social">
-                        <a href="https://github.com/" target="_blank" class="home__social-icon">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                        <a href="https://linkedin.com/" target="_blank" class="home__social-icon">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://dribbble.com/" target="_blank" class="home__social-icon">
-                            <i class="fa-brands fa-dribbble"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ABOUT SECTION -->
-        <section class="about section" id="about">
-
-            <div class="about__container container">
-                <div class="about__data">
-                    <h2 class="section__title">About Myself</h2>
-                    <p class="about__description">
-                        Mobile Developer with 4+ years of experience specializing in Android development using Kotlin,
-                        Jetpack Compose, and modern architectures. Fast learner with strong problem-solving skills and
-                        solid collaboration experience. Proven ability to build production-ready apps, optimize
-                        performance, and maintain high code quality using best practices and up-to-date technology
-                        stacks.
-                    </p>
-
-                    <div class="about__stats">
-                        <div class="stats__item">
-                            <span class="stats__number">19<span class="stats__plus">+</span></span>
-                            <span class="stats__label">Client Projects</span>
-                        </div>
-                        <div class="stats__item">
-                            <span class="stats__number">8<span class="stats__plus">+</span></span>
-                            <span class="stats__label">Achievements</span>
-                        </div>
-                        <div class="stats__item">
-                            <span class="stats__number">4<span class="stats__plus">+</span></span>
-                            <span class="stats__label">Years of Experience</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- EXPERIENCE SECTION -->
-        <section class="experience section" id="experience">
-            <div class="experience__container container">
-                <h2 class="section__title">Qualification</h2>
-                <div class="experience__tabs">
-                    <div class="experience__button button--flex experience__active" data-target="#education">
-                        <i class="fa-solid fa-graduation-cap experience__icon"></i> Education
-                    </div>
-                    <div class="experience__button button--flex" data-target="#work">
-                        <i class="fa-solid fa-briefcase experience__icon"></i> Work
-                    </div>
-                </div>
-
-                <div class="experience__sections">
-                    <!-- Education Content -->
-                    <div class="experience__content experience__active" data-content id="education">
-                        <div class="experience__data">
-                            <div>
-                                <h3 class="experience__title">Computer Science</h3>
-                                <span class="experience__subtitle">State Polytechnic of Jember</span>
-                                <div class="experience__calendar">
-                                    <i class="fa-regular fa-calendar"></i> 2019 - 2023
-                                </div>
-                            </div>
-                            <div>
-                                <span class="experience__rounder"></span>
-                                <span class="experience__line"></span>
-                            </div>
-                        </div>
-
-                        <div class="experience__data">
-                            <div></div>
-                            <div>
-                                <span class="experience__rounder"></span>
-                                <span class="experience__line"></span>
-                            </div>
-                            <div>
-                                <h3 class="experience__title">Mobile Development</h3>
-                                <span class="experience__subtitle">Bangkit Academy 2023</span>
-                                <div class="experience__calendar">
-                                    <i class="fa-regular fa-calendar"></i> 2023
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Work Content -->
-                    <div class="experience__content" data-content id="work">
-                        <!-- 1. MaxxiTani (Left) -->
-                        <div class="experience__data" data-id="maxxitani">
-                            <div>
-                                <h3 class="experience__title">Mobile Developer</h3>
-                                <span class="experience__subtitle">MaxxiTani</span>
-                                <div class="experience__calendar">
-                                    <i class="fa-regular fa-calendar"></i> Sept 2022 - Present
-                                </div>
-                            </div>
-                            <div>
-                                <span class="experience__rounder"></span>
-                                <span class="experience__line"></span>
-                            </div>
-                        </div>
-
-                        <!-- 2. BIGIO.ID (Right) -->
-                        <div class="experience__data" data-id="bigio">
-                            <div></div>
-                            <div>
-                                <span class="experience__rounder"></span>
-                                <span class="experience__line"></span>
-                            </div>
-                            <div>
-                                <h3 class="experience__title">Mobile Developer</h3>
-                                <span class="experience__subtitle">BIGIO.ID</span>
-                                <div class="experience__calendar">
-                                    <i class="fa-regular fa-calendar"></i> Sept 2022 - Sept 2024
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 3. Google Bangkit (Left) -->
-                        <div class="experience__data" data-id="bangkit">
-                            <div>
-                                <h3 class="experience__title">Mobile Mentor</h3>
-                                <span class="experience__subtitle">Google Bangkit Academy</span>
-                                <div class="experience__calendar">
-                                    <i class="fa-regular fa-calendar"></i> Feb 2023 - Jan 2024
-                                </div>
-                            </div>
-                            <div>
-                                <span class="experience__rounder"></span>
-                                <span class="experience__line"></span>
-                            </div>
-                        </div>
-
-                        <!-- 4. TeDi (Right) -->
-                        <div class="experience__data" data-id="tedi">
-                            <div></div>
-                            <div>
-                                <span class="experience__rounder"></span>
-                                <span class="experience__line"></span>
-                            </div>
-                            <div>
-                                <h3 class="experience__title">Android Engineer</h3>
-                                <span class="experience__subtitle">TeDi (Teman Disabilitas)</span>
-                                <div class="experience__calendar">
-                                    <i class="fa-regular fa-calendar"></i> Apr 2022 - Dec 2022
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 5. Nusantara Beta (Left) -->
-                        <div class="experience__data" data-id="nusantara">
-                            <div>
-                                <h3 class="experience__title">Android Intern</h3>
-                                <span class="experience__subtitle">Nusantara Beta Studio</span>
-                                <div class="experience__calendar">
-                                    <i class="fa-regular fa-calendar"></i> Mar 2022 - Sep 2022
-                                </div>
-                            </div>
-                            <div>
-                                <span class="experience__rounder"></span>
-                                <span class="experience__line"></span>
-                            </div>
-                        </div>
-
-                        <!-- 6. VisitInd (Right) -->
-                        <div class="experience__data" data-id="visitind">
-                            <div></div>
-                            <div>
-                                <span class="experience__rounder"></span>
-                                <span class="experience__line"></span>
-                            </div>
-                            <div>
-                                <h3 class="experience__title">Flutter Intern</h3>
-                                <span class="experience__subtitle">VisitInd</span>
-                                <div class="experience__calendar">
-                                    <i class="fa-regular fa-calendar"></i> Dec 2021 - Feb 2022
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 7. CV Syameer (Left) -->
-                        <div class="experience__data" data-id="syameer">
-                            <div>
-                                <h3 class="experience__title">Android Developer</h3>
-                                <span class="experience__subtitle">CV Syameer Technology</span>
-                                <div class="experience__calendar">
-                                    <i class="fa-regular fa-calendar"></i> Sep 2020 - Sep 2021
-                                </div>
-                            </div>
-                            <div>
-                                <span class="experience__rounder"></span>
-                                <!-- Last line can be removed if desired, but keeping for consistency or css fix -->
-                                <!-- <span class="experience__line"></span> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FEATURED PROJECTS SECTION -->
-        <section class="portfolio section" id="portfolio">
-            <div class="portfolio__container container swiper mySwiper">
-                <h2 class="section__title">Portfolio</h2>
-                <div class="swiper-wrapper">
-                    <!-- Project 1: Eiger Adventure -->
-                    <div class="portfolio__card swiper-slide">
-                        <div class="portfolio__img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
-                                alt="Eiger Adventure" class="portfolio__img">
-                        </div>
-                        <div class="portfolio__data">
-                            <h4 class="portfolio__title">Eiger Adventure</h4>
-                            <div class="portfolio__tags">
-                                <span class="portfolio__tag">Flutter</span>
-                                <span class="portfolio__tag">Android</span>
-                                <span class="portfolio__tag">iOS</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 2: KaderKita -->
-                    <div class="portfolio__card swiper-slide">
-                        <div class="portfolio__img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=2070&auto=format&fit=crop"
-                                alt="KaderKita" class="portfolio__img">
-                        </div>
-                        <div class="portfolio__data">
-                            <h4 class="portfolio__title">KaderKita</h3>
-                                <div class="portfolio__tags">
-                                    <span class="portfolio__tag">Flutter</span>
-                                    <span class="portfolio__tag">Android</span>
-                                    <span class="portfolio__tag">iOS</span>
-                                </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 3: Exploria Host -->
-                    <div class="portfolio__card swiper-slide">
-                        <div class="portfolio__img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
-                                alt="Exploria Host" class="portfolio__img">
-                        </div>
-                        <div class="portfolio__data">
-                            <h4 class="portfolio__title">Exploria Host</h3>
-                                <div class="portfolio__tags">
-                                    <span class="portfolio__tag">Flutter</span>
-                                    <span class="portfolio__tag">Android</span>
-                                    <span class="portfolio__tag">iOS</span>
-                                    <span class="portfolio__tag">Go</span>
-                                </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 4: Jelajahin -->
-                    <div class="portfolio__card swiper-slide">
-                        <div class="portfolio__img-wrapper">
-                            <img src="https://cdn.prod.website-files.com/649220d2911fb5552e5aca5e/64c8662a663042857df0da2d_What%20is%20a%20Design%20Sprint.webp"
-                                alt="Jelajahin" class="portfolio__img">
-                        </div>
-                        <div class="portfolio__data">
-                            <h4 class="portfolio__title">Jelajahin</h3>
-                                <div class="portfolio__tags">
-                                    <span class="portfolio__tag">Flutter</span>
-                                    <span class="portfolio__tag">Go</span>
-                                </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 5: KaderKita -->
-                    <div class="portfolio__card swiper-slide">
-                        <div class="portfolio__img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=2070&auto=format&fit=crop"
-                                alt="KaderKita" class="portfolio__img">
-                        </div>
-                        <div class="portfolio__data">
-                            <h4 class="portfolio__title">KaderKita</h3>
-                                <div class="portfolio__tags">
-                                    <span class="portfolio__tag">Flutter</span>
-                                    <span class="portfolio__tag">Android</span>
-                                    <span class="portfolio__tag">iOS</span>
-                                </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Navigation -->
-                <div class="swiper-navigation">
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CERTIFICATION SECTION -->
-        <section class="certification section" id="certification">
-            <div class="portfolio__container container swiper myCertSwiper">
-                <h2 class="section__title">Certification</h2>
-                <div class="swiper-wrapper">
-                    <div class="portfolio__card swiper-slide">
-                        <div class="portfolio__img-wrapper cert-preview">
-                            <img src="assets/made.png" alt="Certification 2" class="portfolio__img">
-                        </div>
-                    </div>
-                    <div class="portfolio__card swiper-slide">
-                        <div class="portfolio__img-wrapper cert-preview">
-                            <img src="assets/aad.png" alt="Certification 1" class="portfolio__img">
-                        </div>
-                    </div>
-                </div>
-                <!-- Navigation -->
-                <div class="swiper-navigation">
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- TOOLS & SKILLS SECTION -->
-        <section class="skills section" id="skills">
-            <div class="skills__container container">
-                <h2 class="section__title">Tools & Skills</h2>
-                <!-- Filters -->
-                <div class="skills__tabs">
-                    <div class="skills__button button--small button--gray active-work" data-filter="all">All</div>
-                    <div class="skills__button button--small button--gray" data-filter=".mobile">Mobile</div>
-                    <div class="skills__button button--small button--gray" data-filter=".web">Web</div>
-                    <div class="skills__button button--small button--gray" data-filter=".backend">Backend</div>
-                    <div class="skills__button button--small button--gray" data-filter=".tools">Tools</div>
-                </div>
-
-                <!-- Grid -->
-                <div class="skills__content grid">
-                    <!-- Mobile -->
-                    <div class="skills__data mobile mix">
-                        <i class="devicon-flutter-plain colored skills__icon"></i>
-                        <h3 class="skills__name">Flutter</h3>
-                    </div>
-                    <div class="skills__data mobile mix">
-                        <i class="devicon-android-plain colored skills__icon"></i>
-                        <h3 class="skills__name">Android</h3>
-                    </div>
-                    <div class="skills__data mobile mix">
-                        <i class="devicon-kotlin-plain colored skills__icon"></i>
-                        <h3 class="skills__name">Kotlin</h3>
-                    </div>
-                    <div class="skills__data mobile mix">
-                        <i class="devicon-swift-plain colored skills__icon"></i>
-                        <h3 class="skills__name">Swift</h3>
-                    </div>
-
-                    <!-- Web -->
-                    <div class="skills__data web mix">
-                        <i class="devicon-react-original colored skills__icon"></i>
-                        <h3 class="skills__name">React</h3>
-                    </div>
-                    <div class="skills__data web mix">
-                        <i class="devicon-tailwindcss-original colored skills__icon"></i>
-                        <h3 class="skills__name">Tailwind</h3>
-                    </div>
-                    <div class="skills__data web mix">
-                        <i class="devicon-javascript-plain colored skills__icon"></i>
-                        <h3 class="skills__name">JavaScript</h3>
-                    </div>
-                    <div class="skills__data web mix">
-                        <i class="devicon-typescript-plain colored skills__icon"></i>
-                        <h3 class="skills__name">TypeScript</h3>
-                    </div>
-
-                    <!-- Backend -->
-                    <div class="skills__data backend mix">
-                        <i class="devicon-go-original-wordmark colored skills__icon"></i>
-                        <h3 class="skills__name">Go</h3>
-                    </div>
-
-                    <!-- Tools -->
-                    <div class="skills__data tools mix">
-                        <i class="devicon-git-plain colored skills__icon"></i>
-                        <h3 class="skills__name">Git</h3>
-                    </div>
-                    <div class="skills__data tools mix">
-                        <i class="devicon-figma-plain colored skills__icon"></i>
-                        <h3 class="skills__name">Figma</h3>
-                    </div>
-                    <div class="skills__data tools mix">
-                        <i class="devicon-vscode-plain colored skills__icon"></i>
-                        <h3 class="skills__name">VS Code</h3>
-                    </div>
-                    <div class="skills__data tools mix">
-                        <i class="devicon-gitlab-plain colored skills__icon"></i>
-                        <h3 class="skills__name">GitLab</h3>
-                    </div>
-                    <div class="skills__data tools mix">
-                        <i class="devicon-google-plain skills__icon"></i>
-                        <h3 class="skills__name">Googling</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT SECTION -->
-        <section class="contact section" id="contact">
-            <div class="contact__container container grid">
-                <h2 class="section__title">Contact Me</h2>
-                <div class="contact__content">
-                    <div class="contact__info">
-                        <div class="contact__card">
-                            <i class="fa-regular fa-envelope contact__card-icon"></i>
-                            <h3 class="contact__card-title">Email</h3>
-                            <span class="contact__card-data">sangbintang917@email.com</span>
-                            <a href="mailto:user@email.com" class="contact__button">Write me <i
-                                    class="fa-solid fa-arrow-right contact__button-icon"></i></a>
-                        </div>
-
-                        <div class="contact__card">
-                            <i class="fa-brands fa-whatsapp contact__card-icon"></i>
-                            <h3 class="contact__card-title">Whatsapp</h3>
-                            <span class="contact__card-data">0851-5688-5049</span>
-                            <a href="#" class="contact__button">Write me <i
-                                    class="fa-solid fa-arrow-right contact__button-icon"></i></a>
-                        </div>
-
-                        <div class="contact__card">
-                            <i class="fa-brands fa-linkedin contact__card-icon"></i>
-                            <h3 class="contact__card-title">LinkedIn</h3>
-                            <span class="contact__card-data">Bintang Putera</span>
-                            <a href="https://linkedin.com/in/bintang-putera" target="_blank"
-                                class="contact__button">Connect <i
-                                    class="fa-solid fa-arrow-right contact__button-icon"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="footer__container container">
-            <ul class="footer__list">
-                <li>
-                    <a href="#about" class="footer__link">About</a>
-                </li>
-                <li>
-                    <a href="#portfolio" class="footer__link">Projects</a>
-                </li>
-                <li>
-                    <a href="#experience" class="footer__link">Experience</a>
-                </li>
-            </ul>
-
-            <div class="footer__social">
-                <a href="https://www.instagram.com/bintangpoetra.kt" class="footer__social-link" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://twitter.com/" class="footer__social-link" target="_blank">
-                    <i class="fa-brands fa-x-twitter"></i>
-                </a>
-            </div>
-
-            <span class="footer__copy">
-                &#169; Bintang Putera. All rights reserved.
-            </span>
-        </div>
-    </footer>
-
-    <div class="experience__modal" id="experience-modal">
-        <div class="experience__modal-content">
-            <h4 class="experience__modal-title">Job Description</h4>
-            <i class="fa-solid fa-xmark experience__modal-close" id="modal-close"></i>
-
-            <ul class="experience__modal-services grid" id="modal-list">
-                <!-- Content injected via JS -->
-                <li class="experience__modal-service">
-                    <i class="fa-regular fa-check-circle experience__modal-icon"></i>
-                    <p>Build and maintain mobile apps...</p>
-                </li>
-            </ul>
-        </div>
+  <!-- HERO -->
+  <section id="top" class="hero">
+    <div class="container">
+      <p class="mono accent">$ whoami</p>
+      <h1>Bintang Putera</h1>
+      <p class="hero-role">Android Developer <span class="dim">·</span> Kotlin / Jetpack Compose</p>
+      <p class="hero-desc">5+ years shipping production mobile apps across 10+ industries. MVVM/MVI, CI/CD,
+        Google-certified. Currently building at <strong>MaxxiTani</strong>.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">Get in touch</a>
+        <a href="#experience" class="btn btn-ghost">See experience</a>
+      </div>
+      <div class="hero-meta mono">
+        <span>📍 Surabaya, East Java, ID</span>
+        <span>📧 sangbintang917@gmail.com</span>
+      </div>
     </div>
+  </section>
 
-    <!-- Certification Lightbox Modal -->
-    <div class="cert-lightbox" id="cert-lightbox">
-        <span class="cert-lightbox__close">&times;</span>
-        <img class="cert-lightbox__img" id="cert-lightbox-img" src="" alt="Certificate Preview">
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2><span class="mono accent">01.</span> Summary</h2>
+      <p class="lead">
+        Android Developer with 5+ years of experience building production-ready mobile apps using Kotlin,
+        Jetpack Compose, and modern architectures (MVVM/MVI). Track record of delivering 10+ apps across
+        multiple industries, mentoring developers, and driving measurable improvements in code quality and
+        team workflow. Google-certified Associate Android Developer with hands-on experience in CI/CD,
+        app store releases, and cross-functional collaboration in teams of 20+.
+      </p>
+
+      <div class="edu-grid">
+        <div class="card">
+          <p class="mono accent-sm">2019 – 2023</p>
+          <h3>State Polytechnic of Jember</h3>
+          <p class="dim">Bachelor of Applied Computer · GPA 3.8</p>
+        </div>
+        <div class="card">
+          <p class="mono accent-sm">Feb – Jul 2022</p>
+          <h3>Google Bangkit Academy</h3>
+          <p class="dim">Mobile Development Path</p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section alt">
+    <div class="container">
+      <h2><span class="mono accent">02.</span> Experience</h2>
 
-    <script src="script.js"></script>
+      <div class="timeline">
+
+        <div class="tl-item">
+          <div class="tl-head">
+            <h3>Mobile Developer <span class="dim">@ MaxxiTani</span></h3>
+            <span class="mono tl-date">Sept 2024 — Present</span>
+          </div>
+          <ul>
+            <li>Built and maintained an internal marketing platform using Kotlin, Jetpack Compose, Hilt, and MVI architecture, collaborating in a 20+ person cross-functional team.</li>
+            <li>Improved app stability and performance through strategic refactoring — eliminated dead code, resolved bottlenecks, reduced codebase complexity.</li>
+            <li>Streamlined team workflows via GitLab CI/CD pipelines for faster, more reliable releases.</li>
+            <li>Leveraged AI-assisted development tools to accelerate feature delivery and code review cycles.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-head">
+            <h3>Mobile Developer <span class="dim">@ BIGIO.ID</span></h3>
+            <span class="mono tl-date">Sept 2022 — Sept 2024</span>
+          </div>
+          <ul>
+            <li>Delivered 10+ mobile applications across diverse industries using Flutter and Kotlin — 25K+ combined downloads.</li>
+            <li>Mentored interns and led knowledge-sharing sessions to elevate team capability and onboarding speed.</li>
+            <li>Owned full release cycle: requirements, bug fixing, documentation, feature flags, Crashlytics, Play Store & App Store submissions.</li>
+            <li>Conducted codebase reviews for quality and clean architecture across a 10-person team.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-head">
+            <h3>Mobile Development Mentor <span class="dim">@ Google Bangkit Academy 2023</span></h3>
+            <span class="mono tl-date">Feb 2023 — Jan 2024</span>
+          </div>
+          <ul>
+            <li>Mentored 24 students through capstone milestones — 90% graduation rate among mentees.</li>
+            <li>Guided adoption of MVVM architecture, Jetpack libraries, structured Git workflows.</li>
+            <li>Reviewed deliverables and gave actionable feedback for timely, high-quality submissions.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-head">
+            <h3>Software Engineer (Android) <span class="dim">@ TeDi (Teman Disabilitas)</span></h3>
+            <span class="mono tl-date">Apr 2022 — Dec 2022</span>
+          </div>
+          <ul>
+            <li>Developed an Android accessibility application using modern recommended practices.</li>
+            <li>Integrated app with Google Cloud services and managed Play Store releases.</li>
+            <li>Improved team workflows using GitHub and structured codebase organization.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-head">
+            <h3>Android Developer Intern <span class="dim">@ Nusantara Beta Studio</span></h3>
+            <span class="mono tl-date">Mar 2022 — Sep 2022</span>
+          </div>
+          <ul>
+            <li>Developed Android applications using best practices and recommended architecture.</li>
+            <li>Worked with Git Flow to increase team development productivity.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-head">
+            <h3>Flutter Developer Intern <span class="dim">@ VisitInd</span></h3>
+            <span class="mono tl-date">Dec 2021 — Feb 2022</span>
+          </div>
+          <ul>
+            <li>Developed application using Flutter, applying best-practice, readable-code methods.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-head">
+            <h3>Android Developer <span class="dim">@ CV Syameer Technology</span></h3>
+            <span class="mono tl-date">Sep 2020 — Sep 2021</span>
+          </div>
+          <ul>
+            <li>Built Android apps using Kotlin, Jetpack, and reactive programming.</li>
+            <li>Implemented UI from design mockups, applied clean architecture.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="section">
+    <div class="container">
+      <h2><span class="mono accent">03.</span> Portfolio</h2>
+      <p class="lead">Selected mobile apps shipped across banking, healthcare, government, and accessibility.</p>
+
+      <div class="portfolio-grid">
+
+        <div class="card proj-card">
+          <h3>Quran Hifz</h3>
+          <p class="dim">Create a core feature which is Quran Memorizing and Quran Interaction. Bug fixing and improvement to increase the performance of the apps.</p>
+          <div class="tags"><span class="tag">Flutter</span><span class="tag">GetX</span><span class="tag">DIO Client</span><span class="tag">Firebase</span></div>
+          <div class="proj-links">
+            <a href="https://play.google.com/store/apps/details?id=id.bigio.dzikra.quran" target="_blank" rel="noopener">Play Store ↗</a>
+            <a href="https://apps.apple.com/id/app/quran-hifz-by-dzikra/id6477821048?l=id" target="_blank" rel="noopener">App Store ↗</a>
+          </div>
+        </div>
+
+        <div class="card proj-card">
+          <h3>Booking Online RS LNG Badak Bontang</h3>
+          <p class="dim">Mobile app for patients to consult or book appointments online without visiting the hospital in person. Built on system analysis with Flutter.</p>
+          <div class="tags"><span class="tag">Flutter</span><span class="tag">GetX</span><span class="tag">DIO Client</span><span class="tag">Firebase</span></div>
+        </div>
+
+        <div class="card proj-card">
+          <h3>Pokphand CRM</h3>
+          <p class="dim">Farming and surveying monitoring app with offline mode, letting users operate without a connection.</p>
+          <div class="tags"><span class="tag">Flutter</span><span class="tag">GetX</span><span class="tag">BLoC</span><span class="tag">DIO Client</span><span class="tag">Firebase</span><span class="tag">Google Maps</span></div>
+          <div class="proj-links">
+            <a href="https://play.google.com/store/apps/details?id=id.co.cpi.crm" target="_blank" rel="noopener">Play Store ↗</a>
+          </div>
+        </div>
+
+        <div class="card proj-card">
+          <h3>Berita Jakarta</h3>
+          <p class="dim">Maintained and developed new features for Jakarta's official news app; owned bug fixing.</p>
+          <div class="tags"><span class="tag">Kotlin</span><span class="tag">Android Jetpack</span><span class="tag">MVVM</span><span class="tag">Retrofit</span></div>
+          <div class="proj-links">
+            <a href="https://play.google.com/store/apps/details?id=id.bigio.beritajakarta&hl=en_ZA" target="_blank" rel="noopener">Play Store ↗</a>
+            <a href="https://apps.apple.com/id/app/beritajakarta-id/id1518031021?l=id" target="_blank" rel="noopener">App Store ↗</a>
+          </div>
+        </div>
+
+        <div class="card proj-card">
+          <h3>JOUMPA Management System</h3>
+          <p class="dim">Assistance service monitoring platform with real-time tracking and reporting for passenger data and reservations, public and internal.</p>
+          <div class="tags"><span class="tag">Kotlin</span><span class="tag">Android Jetpack</span><span class="tag">Flutter</span><span class="tag">MVVM</span><span class="tag">Android</span><span class="tag">BLoC</span></div>
+          <div class="proj-links">
+            <a href="https://play.google.com/store/apps/details?id=id.bigio.gapura.joumpa.asst&hl=en_ZA" target="_blank" rel="noopener">Play Store ↗</a>
+            <a href="https://apps.apple.com/in/app/joumpa-for-customer/id1600399708" target="_blank" rel="noopener">App Store ↗</a>
+          </div>
+        </div>
+
+        <div class="card proj-card">
+          <h3>Booking Online RSUD Cileungsi</h3>
+          <p class="dim">Online consultation and appointment booking app for a public hospital, removing the need to queue in person. Built with Kotlin.</p>
+          <div class="tags"><span class="tag">Kotlin</span><span class="tag">Android Jetpack</span><span class="tag">MVVM</span><span class="tag">Retrofit</span></div>
+          <div class="proj-links">
+            <a href="https://play.google.com/store/apps/details?id=id.bigio.healthcare.cileungsi" target="_blank" rel="noopener">Play Store ↗</a>
+          </div>
+        </div>
+
+        <div class="card proj-card">
+          <h3>Indonesian Orthopaedic Association (PABOI)</h3>
+          <p class="dim">Admin app for specialist doctors to manage and execute approval requests quickly.</p>
+          <div class="tags"><span class="tag">Flutter</span><span class="tag">BLoC</span><span class="tag">HTTP Client</span></div>
+          <div class="proj-links">
+            <a href="https://play.google.com/store/apps/details?id=id.bigio.paboi" target="_blank" rel="noopener">Play Store ↗</a>
+          </div>
+        </div>
+
+        <div class="card proj-card">
+          <h3>TeDi – Teman Disabilitas</h3>
+          <p class="dim">Indonesia's first all-in-one accessibility app covering all disability types, with AI and Machine Learning features.</p>
+          <div class="tags"><span class="tag">Kotlin</span><span class="tag">Android Jetpack</span><span class="tag">ML Kit API</span><span class="tag">MVVM</span><span class="tag">Retrofit</span><span class="tag">TFLite</span></div>
+        </div>
+
+        <div class="card proj-card">
+          <h3>SumbanginAja</h3>
+          <p class="dim">Food-sharing app connecting people with excess food to those who need it. Clean Architecture throughout.</p>
+          <div class="tags"><span class="tag">Kotlin</span><span class="tag">Android Jetpack</span><span class="tag">Koin DI</span><span class="tag">MVVM</span><span class="tag">Retrofit</span><span class="tag">Google Maps</span></div>
+          <div class="proj-links">
+            <a href="https://github.com/newt007/sumbangin-aja" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="card proj-card">
+          <h3>Booque — Book Sharing Apps</h3>
+          <p class="dim">Book-sharing app aimed at reducing paper waste, built with Clean Architecture for maintainability.</p>
+          <div class="tags"><span class="tag">Kotlin</span><span class="tag">Android Jetpack</span><span class="tag">Koin DI</span><span class="tag">MVVM</span><span class="tag">Retrofit</span><span class="tag">RxJava</span></div>
+          <div class="proj-links">
+            <a href="https://github.com/newt007/booque-app" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="card proj-card">
+          <h3>IMMA — Integrated Material Monitoring Application</h3>
+          <p class="dim">Warehouse material monitoring app for PJB Services, built with Clean Architecture principles.</p>
+          <div class="tags"><span class="tag">Kotlin</span><span class="tag">Android Jetpack</span><span class="tag">Dependency Injection</span><span class="tag">MVVM</span><span class="tag">Retrofit</span><span class="tag">RxJava</span></div>
+        </div>
+
+        <div class="card proj-card">
+          <h3>Griya Child</h3>
+          <p class="dim">Android app tracking a child's development from month 1 to month 72, integrated with external APIs.</p>
+          <div class="tags"><span class="tag">Java</span><span class="tag">Retrofit</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section alt">
+    <div class="container">
+      <h2><span class="mono accent">04.</span> Skills & Certifications</h2>
+
+      <div class="skills-grid">
+        <div class="card">
+          <h3>Technical</h3>
+          <div class="tags">
+            <span class="tag">Kotlin</span><span class="tag">Flutter</span><span class="tag">Jetpack Compose</span>
+            <span class="tag">Android Jetpack</span><span class="tag">MVVM</span><span class="tag">MVI</span>
+            <span class="tag">Coroutines / Flow</span><span class="tag">GetX</span><span class="tag">BLoC</span>
+            <span class="tag">Hilt</span><span class="tag">Firebase</span><span class="tag">CI/CD</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Certifications</h3>
+          <ul class="plain-list">
+            <li>Associate Android Developer — Google</li>
+            <li>Menjadi Android Developer Expert — Dicoding Indonesia</li>
+            <li>Belajar Pengembangan Aplikasi Android Intermediate — Dicoding Indonesia</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Languages</h3>
+          <ul class="plain-list">
+            <li>Bahasa Indonesia — Native</li>
+            <li>English — Intermediate</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements" class="section">
+    <div class="container">
+      <h2><span class="mono accent">05.</span> Achievements</h2>
+
+      <div class="ach-grid">
+        <div class="card">
+          <p class="mono accent-sm">Google Bangkit Academy 2022</p>
+          <h3>Top 15 Capstone Project & Incubation</h3>
+          <p class="dim">Led development of TeDi (Teman Disabilitas), an all-in-one accessibility app. Team accepted for $10K USD incubation from Google and Dikti.</p>
+        </div>
+        <div class="card">
+          <p class="mono accent-sm">TIF Exhibition 2020 · State Polytechnic of Jember</p>
+          <h3>1st Best Application</h3>
+          <p class="dim">Library management desktop app built with Microsoft Access.</p>
+        </div>
+        <div class="card">
+          <p class="mono accent-sm">TIF Exhibition 2021 · State Polytechnic of Jember</p>
+          <h3>2nd Best Application</h3>
+          <p class="dim">Book-sharing app using Kotlin & Android Jetpack, integrated with REST API.</p>
+        </div>
+        <div class="card">
+          <p class="mono accent-sm">KMIPN 2021 · State Polytechnic of Malang</p>
+          <h3>Hackathon Finalist</h3>
+          <p class="dim">Built "Sumbangin Aja", a food-sharing mobile app, among ~1500 applicants nationwide.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <h2><span class="mono accent">06.</span> Contact</h2>
+      <p class="lead">Open to new opportunities and collaborations. Reach out any time.</p>
+      <div class="contact-links">
+        <a href="mailto:sangbintang917@gmail.com" class="btn btn-primary">✉ Email</a>
+        <a href="https://www.linkedin.com/in/bintangpoetra" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+        <a href="tel:+6285156885049" class="btn btn-ghost">📞 +62 851 5688 5049</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="site-footer">
+  <p class="mono dim">© <span id="year"></span> Bintang Putera — built with Kotlin energy, deployed as HTML.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
-
 </html>
